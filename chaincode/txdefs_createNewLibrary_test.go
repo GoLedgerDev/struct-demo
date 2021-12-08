@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	cc "github.com/goledgerdev/cc-tools-demo/chaincode"
+	cc "github.com/goledgerdev/struct-demo/chaincode"
 	"github.com/goledgerdev/cc-tools/mock"
 )
 

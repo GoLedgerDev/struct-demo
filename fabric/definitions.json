@@ -8,7 +8,7 @@
         "channelName": "mainchannel",
         "chaincodes": [
           {
-            "chaincodeName": "cc-tools-demo",
+            "chaincodeName": "struct-demo",
             "init": "",
             "endorsement": {
               "identities": [

@@ -22,7 +22,7 @@ jobs:
         go-version: 1.16      
 
     - name: Build
-      run: go build -v github.com/goledgerdev/cc-tools-demo/chaincode
+      run: go build -v github.com/goledgerdev/struct-demo/chaincode
 
     - name: Test
-      run: go test github.com/goledgerdev/cc-tools-demo/chaincode -coverpkg=./... -v
+      run: go test github.com/goledgerdev/struct-demo/chaincode -coverpkg=./... -v

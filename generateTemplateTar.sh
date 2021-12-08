@@ -9,7 +9,7 @@ tar \
 --exclude=chaincode/assettypes/customAssets.go \
 --exclude=chaincode/collections.json \
 --exclude=chaincode/header/header.go \
--czf cc-tools-demo.tar.gz chaincode
+-czf struct-demo.tar.gz chaincode
 
 # Compress file with rest-server
 # GoFabric will use the one provided
@@ -18,4 +18,4 @@ tar \
 # --exclude=chaincode/assettypes/customAssets.go \
 # --exclude=chaincode/collections.json \
 # --exclude=chaincode/header/header.go \
-# -czf cc-tools-demo.tar.gz chaincode rest-server
+# -czf struct-demo.tar.gz chaincode rest-server

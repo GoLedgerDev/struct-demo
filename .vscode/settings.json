@@ -1,7 +1,7 @@
 {
     "go.testFlags": [
         "-v",
-        "-coverpkg=github.com/goledgerdev/cc-tools-demo/chaincode/..."
+        "-coverpkg=github.com/goledgerdev/struct-demo/chaincode/..."
     ],
     "gopls": {
         "experimentalWorkspaceModule": true

@@ -14,7 +14,7 @@ volumes:
   peer0.org3.example.com:
 
 networks:
-  cc-tools-demo-net:
+  struct-demo-net:
     external: true
 
 services:
@@ -24,7 +24,7 @@ services:
       service: orderer0.org1.example.com
     container_name: orderer0.org1.example.com
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
 
   peer0.org1.example.com:
     container_name: peer0.org1.example.com
@@ -37,7 +37,7 @@ services:
       file: base/docker-compose-base.yaml
       service: peer0.org1.example.com
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
 
   couch.peer0.org1.example.com:
     container_name: couch.peer0.org1.example.com
@@ -51,7 +51,7 @@ services:
       options:
         max-size: "200k"
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
 
   orderer0.org2.example.com:
     extends:
@@ -59,7 +59,7 @@ services:
       service: orderer0.org2.example.com
     container_name: orderer0.org2.example.com
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
 
   peer0.org2.example.com:
     container_name: peer0.org2.example.com
@@ -72,7 +72,7 @@ services:
       file: base/docker-compose-base.yaml
       service: peer0.org2.example.com
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
 
   couch.peer0.org2.example.com:
     container_name: couch.peer0.org2.example.com
@@ -84,7 +84,7 @@ services:
       options:
         max-size: "200k"
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
 
   orderer0.org3.example.com:
     extends:
@@ -92,7 +92,7 @@ services:
       service: orderer0.org3.example.com
     container_name: orderer0.org3.example.com
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
 
   peer0.org3.example.com:
     container_name: peer0.org3.example.com
@@ -105,7 +105,7 @@ services:
       file: base/docker-compose-base.yaml
       service: peer0.org3.example.com
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
 
   couch.peer0.org3.example.com:
     container_name: couch.peer0.org3.example.com
@@ -117,7 +117,7 @@ services:
       options:
         max-size: "200k"
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
 
   api.org1.example.com:
     container_name: api.org1.example.com
@@ -135,9 +135,9 @@ services:
       - ./configsdk-org1.yaml:/rest-server/configsdk.yaml
       - ./channel-artifacts/channel.tx:/rest-server/channel.tx
       - ./channel-artifacts/org1MSPanchors.tx:/rest-server/anchors.tx
-      - ../chaincode:/go/src/github.com/goledgerdev/cc-tools-demo/chaincode
+      - ../chaincode:/go/src/github.com/goledgerdev/struct-demo/chaincode
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
     ports:
       - 3000:3000
 
@@ -157,9 +157,9 @@ services:
       - ./configsdk-org2.yaml:/rest-server/configsdk.yaml
       - ./channel-artifacts/channel.tx:/rest-server/channel.tx
       - ./channel-artifacts/org2MSPanchors.tx:/rest-server/anchors.tx
-      - ../chaincode:/go/src/github.com/goledgerdev/cc-tools-demo/chaincode
+      - ../chaincode:/go/src/github.com/goledgerdev/struct-demo/chaincode
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
     ports:
       - 3001:3000
 
@@ -179,9 +179,9 @@ services:
       - ./configsdk-org3.yaml:/rest-server/configsdk.yaml
       - ./channel-artifacts/channel.tx:/rest-server/channel.tx
       - ./channel-artifacts/org3MSPanchors.tx:/rest-server/anchors.tx
-      - ../chaincode:/go/src/github.com/goledgerdev/cc-tools-demo/chaincode
+      - ../chaincode:/go/src/github.com/goledgerdev/struct-demo/chaincode
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net
     ports:
       - 3002:3000
 
@@ -210,4 +210,4 @@ services:
       - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
       - ./addorg-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/addorg-artifacts
     networks:
-      - cc-tools-demo-net
+      - struct-demo-net

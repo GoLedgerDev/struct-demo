@@ -1,7 +1,7 @@
 package main
 
 import (
-	txdefs "github.com/goledgerdev/cc-tools-demo/chaincode/txdefs"
+	txdefs "github.com/goledgerdev/struct-demo/chaincode/txdefs"
 
 	tx "github.com/goledgerdev/cc-tools/transactions"
 )

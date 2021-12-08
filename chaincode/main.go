@@ -5,9 +5,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/goledgerdev/cc-tools-demo/chaincode/assettypes"
-	"github.com/goledgerdev/cc-tools-demo/chaincode/datatypes"
-	"github.com/goledgerdev/cc-tools-demo/chaincode/header"
+	"github.com/goledgerdev/struct-demo/chaincode/assettypes"
+	"github.com/goledgerdev/struct-demo/chaincode/datatypes"
+	"github.com/goledgerdev/struct-demo/chaincode/header"
 	"github.com/goledgerdev/cc-tools/assets"
 	tx "github.com/goledgerdev/cc-tools/transactions"
 

@@ -66,7 +66,7 @@ generate() {
 }
 
 start_network() {
-  CHAINCODE_NAME=cc-tools-demo
+  CHAINCODE_NAME=struct-demo
   ./clearDev.sh
   docker network create ${CHAINCODE_NAME}-net
   # docker-compose -f docker-compose-ca.yaml up -d
@@ -153,7 +153,7 @@ start_network() {
     --header 'gofabricversion: 0.9.0' \
     -H 'magicnumber: dfff482c-1df5-42ad-95d4-d8d72b2398be' \
     -d '{
-          "chaincode":        "cc-tools-demo",
+          "chaincode":        "struct-demo",
           "channelName":      "mainchannel",
           "chaincodeVersion": "0.1"
         }'
@@ -165,7 +165,7 @@ start_network() {
     --header 'gofabricversion: 0.9.0' \
     -H 'magicnumber: dfff482c-1df5-42ad-95d4-d8d72b2398be' \
     -d '{
-          "chaincode":        "cc-tools-demo",
+          "chaincode":        "struct-demo",
           "channelName":      "mainchannel",
           "chaincodeVersion": "0.1"
         }'
@@ -177,7 +177,7 @@ start_network() {
     --header 'gofabricversion: 0.9.0' \
     -H 'magicnumber: dfff482c-1df5-42ad-95d4-d8d72b2398be' \
     -d '{
-		"chaincode":        "cc-tools-demo",
+		"chaincode":        "struct-demo",
 		"channelName":      "mainchannel",
 		"chaincodeVersion": "0.1"
 	}'
@@ -190,7 +190,7 @@ start_network() {
     -H 'magicnumber: dfff482c-1df5-42ad-95d4-d8d72b2398be' \
     -d "{
           \"channelName\": \"mainchannel\",
-          \"chaincode\": \"cc-tools-demo\",
+          \"chaincode\": \"struct-demo\",
           \"chaincodeVersion\": \"0.1\",
           \"endorsement\": {
               \"identities\": [
