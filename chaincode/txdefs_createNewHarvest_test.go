@@ -6,30 +6,35 @@ import (
 	"reflect"
 	"testing"
 
-	cc "github.com/goledgerdev/struct-demo/chaincode"
 	"github.com/goledgerdev/cc-tools/mock"
+	cc "github.com/goledgerdev/struct-demo/chaincode"
 )
 
-func TestCreateNewLibrary(t *testing.T) {
+func TestCreateNewHarvest(t *testing.T) {
 	stub := mock.NewMockStub("org3MSP", new(cc.CCDemo))
 
 	expectedResponse := map[string]interface{}{
-		"@key":         "library:3cab201f-9e2b-579d-b7b2-72297ed17f49",
+		"@key":         "harvest:59d6420c-9df2-5ea4-9e1c-6f3f7801d231",
 		"@lastTouchBy": "org3MSP",
-		"@lastTx":      "createNewLibrary",
-		"@assetType":   "library",
-		"name":         "Maria's Library",
+		"@lastTx":      "createNewHarvest",
+		"@assetType":   "harvest",
+		"date":         "2002-10-02T12:00:00Z",
+		"harvestTeam":  []interface{}{"Team A"},
+		"type":         1.0,
+		"used":         false,
 	}
 	req := map[string]interface{}{
-		"name": "Maria's Library",
+		"date":        "2002-10-02T12:00:00Z",
+		"type":        1,
+		"harvestTeam": []interface{}{"Team A"},
 	}
 	reqBytes, err := json.Marshal(req)
 	if err != nil {
 		t.FailNow()
 	}
 
-	res := stub.MockInvoke("createNewLibrary", [][]byte{
-		[]byte("createNewLibrary"),
+	res := stub.MockInvoke("createNewHarvest", [][]byte{
+		[]byte("createNewHarvest"),
 		reqBytes,
 	})
 
@@ -53,7 +58,7 @@ func TestCreateNewLibrary(t *testing.T) {
 	}
 
 	var state map[string]interface{}
-	stateBytes := stub.State["library:3cab201f-9e2b-579d-b7b2-72297ed17f49"]
+	stateBytes := stub.State["harvest:59d6420c-9df2-5ea4-9e1c-6f3f7801d231"]
 	err = json.Unmarshal(stateBytes, &state)
 	if err != nil {
 		log.Println(err)
