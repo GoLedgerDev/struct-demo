@@ -1,13 +1,12 @@
 package main
 
 import (
-	"github.com/goledgerdev/struct-demo/chaincode/assettypes"
 	"github.com/goledgerdev/cc-tools/assets"
+	"github.com/goledgerdev/struct-demo/chaincode/assettypes"
 )
 
 var assetTypeList = []assets.AssetType{
-	assettypes.Person,
-	assettypes.Book,
-	assettypes.Library,
-	assettypes.Secret,
+	assettypes.Harvest,
+	assettypes.Wine,
+	assettypes.Actor,
 }
