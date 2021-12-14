@@ -44,5 +44,12 @@ var Wine = assets.AssetType{
 			Label:    "Owner",
 			DataType: "->actor",
 		},
+		{
+			Required:     true,
+			Tag:          "sold",
+			Label:        "Sold?",
+			DataType:     "boolean",
+			DefaultValue: false,
+		},
 	},
 }

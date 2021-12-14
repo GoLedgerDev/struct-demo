@@ -10,6 +10,10 @@ var txList = []tx.Transaction{
 	tx.UpdateAsset,
 	tx.DeleteAsset,
 	txdefs.CreateNewHarvest,
+	txdefs.ProduceWine,
+	txdefs.RequestTransfer,
+	txdefs.AcceptTransfer,
+	txdefs.RegisterWineSale,
 	// txdefs.GetNumberOfBooksFromLibrary,
 	// txdefs.UpdateBookTenant,
 }

@@ -9,4 +9,5 @@ var assetTypeList = []assets.AssetType{
 	assettypes.Harvest,
 	assettypes.Wine,
 	assettypes.Actor,
+	assettypes.TransferRequest,
 }

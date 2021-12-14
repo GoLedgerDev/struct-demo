@@ -17,5 +17,12 @@ var Actor = assets.AssetType{
 			Label:    "Name",
 			DataType: "string",
 		},
+		{
+			Required: true,
+			ReadOnly: true,
+			Tag:      "orgName",
+			Label:    "Org name",
+			DataType: "string",
+		},
 	},
 }

@@ -5,10 +5,12 @@
 - org3 - vinícola
 
 - [x] Registro de safras de uva (vinícola) 
-- [ ] Produção de vinhos a partir das safras (vinícola)
-- [ ] Transferência de vinhos para fornecedora (vinícola/fornecedora)
-- [ ] Transferência para a loja (fornecedora/loja)
-- [ ] Venda do vinho (loja)
+- [x] Produção de vinhos a partir das safras (vinícola)
+- [x] Transferência de vinhos para fornecedora (vinícola/fornecedora)
+- [x] Aceite da transferência da fornecedora
+- [x] Transferência para a loja (fornecedora/loja)
+- [x] Aceite da transferência da loja
+- [x] Venda do vinho (loja)
 - [ ] Transação de rastreamento do vinho (ver etapas do vinho + safra de origem)
 
 Objetivo: Rastrear o percurso do vinho.
